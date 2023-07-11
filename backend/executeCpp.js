@@ -10,8 +10,8 @@ const executeCpp = async (filepath,input) => {
     const child = exec(
 
       // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && abc.exe`,
-      `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
-      // `cd codes && g++ ${jobId}.cpp && (echo ${input}) | a.exe`,
+      // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
+      `cd codes && g++ ${jobId}.cpp && (echo ${input}) | abc.exe`,
       (error, stdout, stderr,stdin) => {
         error && reject({ error, stderr });
         stderr && reject(stderr);
