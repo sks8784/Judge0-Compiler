@@ -1,14 +1,14 @@
-## Install Dependencies
+# Install Dependencies
 
-# For Frontend:
+## For Frontend:
 - cd frontend
 - npm i
 
-# For Backend:
+## For Backend:
 - cd backend
 - npm i
 
-## Environment Variables
+# Environment Variables
 
 Create a .env file in backend folder and add the following environment variables:
 - MONGO_URL=<YOUR_MONGODB_URL>
@@ -17,12 +17,12 @@ Create a .env file in backend folder and add the following environment variables
 - JWT_EXPIRE=5d
 - COOKIE_EXPIRE=5
 
-## Starting the frontend and backend
+# Starting the frontend and backend
 
-# For Frontend:
+## For Frontend:
 - cd frontend
 - npm start
 
-# For Backend
+## For Backend
 - cd backend
 - node index.js
