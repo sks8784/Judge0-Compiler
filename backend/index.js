@@ -1,6 +1,8 @@
 const express = require("express");
-const cors = require("cors");
+const cookieParser=require("cookie-parser");
+const bodyParser=require("body-parser");
 const mongoose = require("mongoose");
+
 const user=require("./routes/userRoute");
 const compiler=require("./routes/compilerRoute");
 
@@ -17,9 +19,10 @@ mongoose.connect(process.env.MONGO_URL)
 
 const app = express();
 
-app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.json({limit: '50mb'}));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.use("/api/v1",user);
 app.use("/api/v1",compiler);
