@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import "./LoginSignUp.css";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
@@ -30,7 +30,7 @@ const LoginSignUp = () => {
         
             const config={headers:{"Content-Type":"application/json"}};
     
-            const {data}=await axios.post(`http://localhost:5000/api/v1/login`,{email:loginEmail,password:loginPassword},config);
+            await axios.post(`/api/v1/login`,{email:loginEmail,password:loginPassword},config);
     
             navigate("/compiler");
             
@@ -54,7 +54,7 @@ const LoginSignUp = () => {
     
             const config={headers:{"Content-Type":"application/json"}};
     
-            const {data}=await axios.post(`http://localhost:5000/api/v1/register`,myForm,config);
+            await axios.post(`/api/v1/register`,myForm,config);
             
             navigate("/compiler");
     
@@ -110,7 +110,7 @@ const LoginSignUp = () => {
                                     <input type="password" placeholder='Password' required value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} />
                                 </div>
 
-                                <input type="submit" value="login" className='loginBtn' />
+                                <input type="submit" value="Login" className='loginBtn' />
 
                             </form>
 

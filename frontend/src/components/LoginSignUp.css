@@ -35,11 +35,11 @@
 }
 
 .login_signUp_toggle > p:hover{
-    color: tomato;
+    color: rgba(12, 15, 15, 0.952);
 }
 
 .LoginSignUpBox > div > button{
-    background-color: tomato;
+    background-color: rgba(11, 14, 207, 0.733);
     height: 3px;
     width: 50%;
     border: none;
@@ -71,7 +71,7 @@
 
 .loginForm > div > input,
 .signUpForm > div > input{
-    padding: 1vmax 4vmax;
+    padding: 1vmax;
     padding-right: 1vmax;
     width: 100%;
     box-sizing: border-box;
@@ -102,41 +102,13 @@
     color: black;
 }
 
-#registerImage > img{
-    width: 3vmax;
-    border-radius: 100%;
-    margin: 1vmax;
-}
 
-#registerImage > input{
-    display:flex;
-    padding: 0%;
-}
-
-#registerImage > input::file-selector-button{
-    cursor: pointer; 
-    width: 100%;
-    z-index: 2;
-    height: 5vh;
-    border: none;
-    margin:0%;
-    font:400 0.8vmax cursive;
-    transition: all 0.5s;
-    padding: 0 1vmax;
-    color:rgba(0,0,0,0.623);
-    background-color:rgba(255,255,255);
-
-}
-
-#registerImage > input::file-selector-button:hover{
-    background-color: rgb(235,235,235);
-}
 
 
 .loginBtn,
 .signUpBtn{
     border: none;
-    background-color: tomato;
+    background-color: rgba(11, 14, 207, 0.733);
     color: white;
     width:100%;
     font:300 0.9vmax "Roboto";
@@ -150,7 +122,7 @@
 
 .loginBtn:hover,
 .signUpBtn:hover{
-    background-color: rgb(179,66,46);
+    background-color: rgba(4, 7, 177, 0.786);
 }
 
 .shiftToLeft{

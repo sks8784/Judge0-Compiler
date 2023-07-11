@@ -40,7 +40,7 @@ const Compiler = () => {
       setStatus(null);
       setJobId(null);
       setJobDetails(null);
-      const { data } = await axios.post("http://localhost:5000/api/v1/run", payload);
+      const { data } = await axios.post("/api/v1/run", payload);
       if (data.jobId) {
         setJobId(data.jobId);
         setStatus("Submitted.");
@@ -50,7 +50,7 @@ const Compiler = () => {
         // poll here
         // pollInterval = setInterval(async () => {
         const { data: statusRes } = await axios.get(
-          `http://localhost:5000/api/v1/status`,
+          `/api/v1/status`,
           {
             params: {
               id: data.jobId,
@@ -117,7 +117,7 @@ const Compiler = () => {
   const logoutUser = async () => {
     try {
 
-      await axios.get(`http://localhost:5000/api/v1/logout`);
+      await axios.get(`/api/v1/logout`);
       navigate("/");
 
     } catch (error) {
