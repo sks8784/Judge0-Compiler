@@ -1,0 +1,24 @@
+.boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    /* margin-right: 5vmax; */
+    transform: translateX(-20%);
+}
+
+.box2 {
+    transform: translateX(+20%);
+}
+
+.logBtn{
+    /* transform: translateX(20%); */
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 2vmax;
+    transform: translateY(-3vmax);
+    /* align-items; */
+}
