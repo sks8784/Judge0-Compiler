@@ -18,7 +18,7 @@ const executeCpp = async (filepath,input) => {
 
       // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && abc.exe`,
       // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
-      `cd codes && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
+      `cd codes && g++ ${jobId}.cpp && (echo ${input}) | a.exe`,
       (error, stdout, stderr,stdin) => {
         error && reject({ error, stderr });
         stderr && reject(stderr);
