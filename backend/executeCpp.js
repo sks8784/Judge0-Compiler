@@ -2,6 +2,7 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
+console.log(__dirname);
 // const outputPath = path.join(__dirname, "outputs");
 
 // if (!fs.existsSync(outputPath)) {
@@ -17,7 +18,7 @@ const executeCpp = async (filepath,input) => {
 
       // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && abc.exe`,
       // `cd ${filepath}\\.. && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
-      `g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
+      `cd ${__dirname}\\codes && g++ ${jobId}.cpp -o abc.exe && (echo ${input}) | abc.exe`,
       (error, stdout, stderr,stdin) => {
         error && reject({ error, stderr });
         stderr && reject(stderr);
